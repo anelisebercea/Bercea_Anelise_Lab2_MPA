@@ -7,15 +7,12 @@ namespace Bercea_Anelise_Lab2_MPA.Models
 {
     public class Author
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public Book Book { get; set; }
-        public ICollection<Book> Books { get; set; }
+        
+        public ICollection<Book>? Books { get; set; }
 
-        public static implicit operator Author(string v)
-        {
-            throw new NotImplementedException();
-        }
+ 
     }
 }

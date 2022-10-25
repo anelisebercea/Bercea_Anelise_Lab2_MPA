@@ -19,13 +19,10 @@ namespace Bercea_Anelise_Lab2_MPA.Data
             modelBuilder.Entity<Customer>().ToTable("Customer");
             modelBuilder.Entity<Order>().ToTable("Order");
             modelBuilder.Entity<Book>().ToTable("Book");
-            modelBuilder.Entity<Author>()
-                .ToTable("Author")
-                .HasOne(b => b.Book)
-                .WithOne(i => i.Author)
-                .HasForeignKey<Book>(b => b.AuthorForeignKey);
-            ;
+            modelBuilder.Entity<Author>().ToTable("Author");
+            
 
         }
+        public DbSet<Bercea_Anelise_Lab2_MPA.Models.Author> Author { get; set; }
     }
 }

@@ -11,10 +11,13 @@ namespace Bercea_Anelise_Lab2_MPA.Models
         public string Title { get; set; }
         
         public decimal Price { get; set; }
+        //public string FullName { get; set; }
 
-        public int AuthorId { get; set; }
-        public Author Author { get; set; }
-        public ICollection<Order> Orders { get; set; }
-        public object AuthorForeignKey { get; internal set; }
+        //Foreign key
+        public int? AuthorId { get; set; }
+        // Navigation property
+        public Author? Author { get; set; }
+        //public ICollection<Order>? Orders { get; set; }
+        // public object AuthorForeignKey { get; internal set; }
     }
 }

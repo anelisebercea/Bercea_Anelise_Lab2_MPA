@@ -10,27 +10,31 @@ namespace Bercea_Anelise_Lab2_MPA.Data
             LibraryContext(serviceProvider.GetRequiredService
             <DbContextOptions<LibraryContext>>()))
             {
+
                 if (context.Books.Any())
                 {
                     return; // BD a fost creata anterior
                 }
-                context.Books.AddRange(
-                new Book
-                {
-                    Title = "Baltagul",
-                    Author = "Mihail Sadoveanu",
-                    Price=Decimal.Parse("22")},
-                new Book
-                {
-                    Title = "Enigma Otiliei",
-                    Author = "George Calinescu",
-                    Price=Decimal.Parse("18")},
-                new Book
-                {
-                    Title = "Maytrei",
-                    Author = "Mircea Eliade",
-                    Price=Decimal.Parse("27")}
-                );
+                //context.Books.AddRange(
+                //new Book
+                //{
+                //    Title = "Baltagul",
+                //    Author = "Mihail Sadoveanu",
+                //    Price = Decimal.Parse("22")
+                //},
+                //new Book
+                //{
+                //    Title = "Enigma Otiliei",
+                //    Author = "George Calinescu",
+                //    Price = Decimal.Parse("18")
+                //},
+                //new Book
+                //{
+                //    Title = "Maytrei",
+                //    Author = "Mircea Eliade",
+                //    Price = Decimal.Parse("27")
+                //}
+                //);
                 context.Customers.AddRange(
                 new Customer
                 {
@@ -41,8 +45,9 @@ namespace Bercea_Anelise_Lab2_MPA.Data
                 new Customer
                 {
                     Name = "Mihailescu Cornel",
-                    Adress = "Str. Bucuresti, nr.45, ap. 2",BirthDate=DateTime.Parse("1969 - 07 - 08")}
-                );
+                    Adress = "Str. Bucuresti, nr.45, ap. 2", BirthDate = DateTime.Parse("1969 - 07 - 08") }
+                ); 
+
                 context.SaveChanges();
             }
         }
