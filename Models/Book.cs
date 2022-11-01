@@ -17,7 +17,7 @@ namespace Bercea_Anelise_Lab2_MPA.Models
         public int? AuthorId { get; set; }
         // Navigation property
         public Author? Author { get; set; }
-        //public ICollection<Order>? Orders { get; set; }
+        public ICollection<Order>? Orders { get; set; }
         // public object AuthorForeignKey { get; internal set; }
     }
 }
